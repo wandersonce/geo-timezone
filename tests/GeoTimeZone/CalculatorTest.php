@@ -8,15 +8,26 @@ use Tests\AbstractUnitTestCase;
 
 class CalculatorTest extends AbstractUnitTestCase
 {
+<<<<<<< HEAD
     const DATA_DIRECTORY = "\media\ana\Datos\geo-timezone\data\\";
 
     protected $calculator;
 
+=======
+    const DATA_DIRECTORY = "/../../data/";
+    
+    protected $calculator;
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     protected function setUp()
     {
         $this->calculator = new Calculator(__DIR__ . self::DATA_DIRECTORY);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     public function getDataLocalDate()
     {
         return array(
@@ -64,7 +75,11 @@ class CalculatorTest extends AbstractUnitTestCase
             )
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     public function getDataCorrectTimestamp()
     {
         return array(
@@ -82,7 +97,11 @@ class CalculatorTest extends AbstractUnitTestCase
             )
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     public function getDataTimeZoneName()
     {
         return array(
@@ -98,7 +117,11 @@ class CalculatorTest extends AbstractUnitTestCase
             )
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     public function getNoTimezone()
     {
         return array(
@@ -110,7 +133,11 @@ class CalculatorTest extends AbstractUnitTestCase
             )
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     public function getDataWrongLatitude()
     {
         return array(
@@ -126,7 +153,11 @@ class CalculatorTest extends AbstractUnitTestCase
             )
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     public function getDataWrongLongitude()
     {
         return array(
@@ -134,7 +165,11 @@ class CalculatorTest extends AbstractUnitTestCase
                 'latitude' => 41.142700,
                 'longitude' => 10000000,
                 'expectedException' => "Invalid longitude: 10000000",
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
             ),
             'Testing Null Longitude' => array(
                 'latitude' => 41.142700,
@@ -143,7 +178,11 @@ class CalculatorTest extends AbstractUnitTestCase
             )
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     public function getDataMaxLatitude()
     {
         return array(
@@ -161,7 +200,11 @@ class CalculatorTest extends AbstractUnitTestCase
             )
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     public function getDataMaxLongitude()
     {
         return array(
@@ -179,7 +222,11 @@ class CalculatorTest extends AbstractUnitTestCase
             )
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataWrongLatitude
      * @param $latitude
@@ -196,7 +243,11 @@ class CalculatorTest extends AbstractUnitTestCase
             echo $error->getMessage();
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataWrongLongitude
      * @param $latitude
@@ -213,7 +264,11 @@ class CalculatorTest extends AbstractUnitTestCase
             echo $error->getMessage();
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataMaxLatitude
      * @param $latitude
@@ -231,7 +286,11 @@ class CalculatorTest extends AbstractUnitTestCase
             echo $error->getMessage();
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataMaxLongitude
      * @param $latitude
@@ -249,7 +308,11 @@ class CalculatorTest extends AbstractUnitTestCase
             echo $error->getMessage();
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataMaxLatitude
      * @param $latitude
@@ -263,7 +326,11 @@ class CalculatorTest extends AbstractUnitTestCase
         $latitudeToTest = $method->invokeArgs($this->calculator, array($latitude));
         $this->assertEquals($adjustedLatitude, $latitudeToTest);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataMaxLongitude
      * @param $latitude
@@ -271,17 +338,27 @@ class CalculatorTest extends AbstractUnitTestCase
      * @param $adjustedLongitude
      * @param $expectedException
      */
+<<<<<<< HEAD
     public function testAdjustMaxLongitudeWithMaxLongitude(
         $latitude,
         $longitude,
         $adjustedLongitude,
         $expectedException
     ) {
+=======
+    public function testAdjustMaxLongitudeWithMaxLongitude($latitude, $longitude, $adjustedLongitude,
+                                                           $expectedException)
+    {
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
         $method = $this->getPrivateMethod(get_class($this->calculator), 'adjustLongitude');
         $longitudeToTest = $method->invokeArgs($this->calculator, array($longitude));
         $this->assertEquals($adjustedLongitude, $longitudeToTest);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataLocalDate
      * @param $latitude
@@ -304,7 +381,11 @@ class CalculatorTest extends AbstractUnitTestCase
             $expectedOffset
         );
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getNoTimezone
      * @param $latitude
@@ -322,7 +403,11 @@ class CalculatorTest extends AbstractUnitTestCase
             echo $error->getMessage();
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataCorrectTimestamp
      * @param $latitude
@@ -335,7 +420,11 @@ class CalculatorTest extends AbstractUnitTestCase
         $correctTimestamp = $this->calculator->getCorrectTimestamp($latitude, $longitude, $timestamp);
         $this->assertEquals($correctTimestamp, $expectedTimestamp);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getNoTimezone
      * @param $latitude
@@ -353,7 +442,11 @@ class CalculatorTest extends AbstractUnitTestCase
             echo $error->getMessage();
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getDataTimeZoneName
      * @param $latitude
@@ -369,7 +462,11 @@ class CalculatorTest extends AbstractUnitTestCase
             echo $error->getMessage();
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
     /**
      * @dataProvider getNoTimezone
      * @param $latitude

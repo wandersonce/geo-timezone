@@ -1,6 +1,10 @@
 /composer.lock
 .lock
 data
+<<<<<<< HEAD
+=======
+test
+>>>>>>> 5506437284d4b5494fbe0d17f19d8e19950c4f84
 /vendor/
 .zip
 .idea
