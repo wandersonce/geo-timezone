@@ -1,0 +1,6 @@
+/composer.lock
+.lock
+data
+/vendor/
+.zip
+.idea

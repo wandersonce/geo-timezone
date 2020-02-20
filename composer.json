@@ -1,0 +1,39 @@
+{
+  "name": "minube/geo-timezone",
+  "homepage": "http://minube.com",
+  "description": "PHP library for timezone calculation from a particular location and date.",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/wandersonce/geo-timezone.git",
+      "autoload": {
+        "files": [
+          "vendor/phayes/geophp/geoPHP.inc"
+        ]
+      }
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "ext-dom": ">=7.0",
+    "ext-mbstring": ">=7.0",
+    "ext-zip": "*",
+    "ext-xml": ">=7.0",
+    "phayes/geoPHP": "1.2.*",
+    "wandersonce/geo-timezone": "dev-jrwan"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.7.4",
+    "guzzlehttp/guzzle": "6.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "GeoTimeZone\\": "src/GeoTimeZone/",
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  }
+}
